@@ -19,6 +19,7 @@ namespace DailyProblem
         private void ShowOptions(){
             Console.WriteLine("=====Choose your problem=====");
             Console.WriteLine("Enter 1: Checking Validtity Of Expression Conatining Nested Parenthesis");
+            Console.WriteLine("Enter 2: Get Factorial Of a Number Using Recurrsion");
 
         }
 
@@ -27,6 +28,9 @@ namespace DailyProblem
             {
                 case 1:
                 ValidateExpression();
+                break;
+                case 2:
+                GetFactorial();
                 break;
                 default:
                 break;
@@ -39,6 +43,15 @@ namespace DailyProblem
             string expression = Console.ReadLine();
             bool isValid = validator.IsValidExpression(expression);
             var message = isValid? "Expression is Valid" : "Expression is Invalid";
+            Console.WriteLine(message);
+            Console.WriteLine("\n");
+        }
+
+        private void GetFactorial(){
+            Factorial factorial = new Factorial();
+            Console.Write("Enter Number To Find Factorial For: ");
+            var number= Convert.ToInt32(Console.ReadLine());
+            string message = "Factorial Value Is: "+ factorial.GetFatorialValue(number);
             Console.WriteLine(message);
             Console.WriteLine("\n");
         }
