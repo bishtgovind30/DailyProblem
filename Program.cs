@@ -20,6 +20,7 @@ namespace DailyProblem
             Console.WriteLine("=====Choose your problem=====");
             Console.WriteLine("Enter 1: Checking Validtity Of Expression Conatining Nested Parenthesis");
             Console.WriteLine("Enter 2: Get Factorial Of a Number Using Recurrsion");
+            Console.WriteLine("Enter 3: Get Nth Power Of a Number Using Recurrsion");
 
         }
 
@@ -31,6 +32,9 @@ namespace DailyProblem
                 break;
                 case 2:
                 GetFactorial();
+                break;
+                case 3:
+                GetNthPowerValue();
                 break;
                 default:
                 break;
@@ -52,6 +56,17 @@ namespace DailyProblem
             Console.Write("Enter Number To Find Factorial For: ");
             var number= Convert.ToInt32(Console.ReadLine());
             string message = "Factorial Value Is: "+ factorial.GetFatorialValue(number);
+            Console.WriteLine(message);
+            Console.WriteLine("\n");
+        }
+        private void GetNthPowerValue(){
+            NthPower nthPower = new NthPower();
+            Console.Write("Enter Number: ");
+            var number= Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter Power: ");
+            var power= Convert.ToInt32(Console.ReadLine());
+
+            string message = "Value Is: "+ nthPower.GetNthPowerValue(number, power);
             Console.WriteLine(message);
             Console.WriteLine("\n");
         }
