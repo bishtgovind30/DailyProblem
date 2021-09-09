@@ -21,6 +21,7 @@ namespace DailyProblem
             Console.WriteLine("Enter 1: Checking Validtity Of Expression Conatining Nested Parenthesis");
             Console.WriteLine("Enter 2: Get Factorial Of a Number Using Recurrsion");
             Console.WriteLine("Enter 3: Get Nth Power Of a Number Using Recurrsion");
+            Console.WriteLine("Enter 4: Tower Of Hanoi");
 
         }
 
@@ -35,6 +36,9 @@ namespace DailyProblem
                 break;
                 case 3:
                 GetNthPowerValue();
+                break;
+                case 4:
+                TowerOfHanoi();
                 break;
                 default:
                 break;
@@ -68,6 +72,13 @@ namespace DailyProblem
 
             string message = "Value Is: "+ nthPower.GetNthPowerValue(number, power);
             Console.WriteLine(message);
+            Console.WriteLine("\n");
+        }
+         private void TowerOfHanoi(){
+             TowerOfHanoi towerOfHanoi = new TowerOfHanoi();
+            Console.Write("Enter Number of Disks: ");
+            var numberOfDisks= Convert.ToInt32(Console.ReadLine());
+            towerOfHanoi.Hanoi(numberOfDisks, 'A', 'B', 'C');
             Console.WriteLine("\n");
         }
     }
